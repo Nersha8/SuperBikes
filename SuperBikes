@@ -10,6 +10,7 @@
 
 			$.ajax({
 				url: "https://motorcycle-specs-database.p.rapidapi.com/article/804882/image",
+				responseType: 'arraybuffer',
 				success: function(data) {
 					var base64Image = btoa(String.fromCharCode.apply(null, new Uint8Array(data))); // Convert binary data to base64 string
 					var imgHtml = '<img src="data:image/png;base64,' + base64Image + '">';
