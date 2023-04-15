@@ -6,10 +6,10 @@
 	<script>
 		$(document).ready(function() {
 			var api_key = "36a9cd383cmshfdc6cc72c871357p11462cjsn62b4a7177251"; // Replace with your API key
-			var api_url = "https://motorsportapi.p.rapidapi.com/api/motorsport/search/superbikes"; // Replace with your API URL
+			var api_url = "motorsportapi.p.rapidapi.com"; // Replace with your API URL
 
 			$.ajax({
-				url: "https://motorsportapi.p.rapidapi.com/api/motorsport/search/mercedes",
+				url: "https://motorsportapi.p.rapidapi.com/api/motorsport/team/214902/image",
 				success: function(data) {
 					var base64Image = btoa(String.fromCharCode.apply(null, new Uint8Array(data))); // Convert binary data to base64 string
 					var imgHtml = '<img src="data:image/png;base64,' + base64Image + '">';
