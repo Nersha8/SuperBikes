@@ -6,7 +6,7 @@
 	<script>
 		$(document).ready(function() {
 			var api_key = "36a9cd383cmshfdc6cc72c871357p11462cjsn62b4a7177251"; // Replace with your API key
-			var api_url = "motorsportapi.p.rapidapi.com"; // Replace with your API URL
+			var api_url = "https://motorsportapi.p.rapidapi.com/api/motorsport/search/superbikes"; // Replace with your API URL
 
 			$.ajax({
 				url: api_url,
