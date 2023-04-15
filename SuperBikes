@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html>https://example.com/api/get-image
 <head>
 	<title>Superbikes Gallery</title>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -9,7 +9,7 @@
 			var api_url = "https://motorsportapi.p.rapidapi.com/api/motorsport/search/superbikes"; // Replace with your API URL
 
 			$.ajax({
-				url: "https://example.com/api/get-image",
+				url: "",
 				success: function(data) {
 					var base64Image = btoa(String.fromCharCode.apply(null, new Uint8Array(data))); // Convert binary data to base64 string
 					var imgHtml = '<img src="data:image/png;base64,' + base64Image + '">';
