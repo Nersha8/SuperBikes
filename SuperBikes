@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Superbikes Gallery</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			var api_key = "36a9cd383cmshfdc6cc72c871357p11462cjsn62b4a7177251"; // Replace with your API key
+			var api_url = "https://motorsportapi.p.rapidapi.com/api/motorsport/search/mercedes"; // Replace with your API URL
+
+			$.ajax({
+				url: api_url,
+				headers: {
+					"Authorization": "Bearer " + api_key
+				},
+				success: function(data) {
+					$.each(data, function(index, bike) {
+						var image_url = bike.image_url;
+						var bike_name = bike.name;
+						var html = '<div class="bike"><img src="' + image_url + '" alt="' + bike_name + '"><h2>' + bike_name + '</h2></div>';
+						$("#gallery").append(html);
+					});
+				},
+				error: function() {
+					alert("Failed to retrieve data from the API.");
+				}
+			});
+		});
+	</script>
+	<style>
+		.bike {
+			display: inline-block;
+			margin: 20px;
+			text-align: center;
+			max-width: 300px;
+		}
+		.bike img {
+			max-width: 100%;
+			height: auto;
+		}
+		.bike h2 {
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Superbikes Gallery</h1>
+	<div id="gallery"></div>
+</body>
+</html>
