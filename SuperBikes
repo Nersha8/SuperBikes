@@ -9,7 +9,7 @@
 			var api_url = "motorcycle-specs-database.p.rapidapi.com"; // Replace with your API URL
 
 			$.ajax({
-				url: "https://motorcycle-specs-database.p.rapidapi.com/article/804882/image",
+				url: "https://motorcycle-specs-database.p.rapidapi.com/article/804882/image/media",
 				responseType: 'arraybuffer',
 				beforeSend: function(xhr) {
 					xhr.setRequestHeader("X-RapidAPI-Host", api_url);
